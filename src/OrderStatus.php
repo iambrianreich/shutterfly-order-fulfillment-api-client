@@ -14,11 +14,10 @@ use RWC\Shutterfly\Status\IStatus;
 
 class OrderStatus
 {
-    const VERSION = '3.0';
     /**
      *  The XML version.
      *
-     * @var string
+     * @var Version
      */
     protected $version;
 
@@ -34,7 +33,7 @@ class OrderStatus
      * logged for diagnostic purposes, and not be persisted with other status
      * data.
      *
-     * @var string
+     * @var string|null
      */
     protected $fulfillerOrderNo;
 
@@ -42,7 +41,7 @@ class OrderStatus
      * Boolean flag indicating this is a test status update. Test status
      * updates will be checked for correctness, but not processed.
      *
-     * @var bool
+     * @var bool|null
      */
     protected $testStatus;
 
@@ -58,7 +57,7 @@ class OrderStatus
      * this will only be logged for diagnostic purposes, and not be persisted
      * with other status data.
      *
-     * @var string
+     * @var string|null
      */
     protected $message;
 
@@ -66,7 +65,7 @@ class OrderStatus
      * Optional data relevant to status. Could contain an URL to access
      * additional data about the status of the order. See note below.
      *
-     * @var string
+     * @var string|null
      */
     protected $moreInfo;
 
@@ -74,28 +73,28 @@ class OrderStatus
      * List of items this status applies too. When present, there should not be
      * shipments, reroutes or rejections.
      *
-     * @var Status\Item[]
+     * @var Status\Item[]|null
      */
     protected $statusItems;
 
     /**
      * List of shipments. See section 8.3.1, “ShipmentType Elements”
      *
-     * @var Shipment[]
+     * @var Shipment[]|null
      */
     protected $shipments;
 
     /**
      * List of reroutes. See section 8.4.1, “ReroutedType Elements”
      *
-     * @var Reroute[]
+     * @var Reroute[]|null
      */
     protected $reroutes;
 
     /**
      * List of rejections. See section 8.5.1, “RejectedType Elements”
      *
-     * @var Rejection[]
+     * @var Rejection[]|null
      */
     protected $rejections;
     /**
@@ -103,9 +102,51 @@ class OrderStatus
      * used in the status query protocol, not the status update protocol. See
      * note below.
      *
-     * @var IExtension
+     * @var IExtension|null
      */
     protected $extension;
+
+    /**
+     * OrderStatus constructor.
+     * @param string $orderNo
+     * @param null|string $fulfillerOrderNo
+     * @param bool|null $testStatus
+     * @param IStatus $status
+     * @param null|string $message
+     * @param null|string $moreInfo
+     * @param null|Status\Item[] $statusItems
+     * @param null|Shipment[] $shipments
+     * @param null|Reroute[] $reroutes
+     * @param null|Rejection[] $rejections
+     * @param null|IExtension $extension
+     */
+    public function __construct(
+        string $orderNo,
+        ?string $fulfillerOrderNo,
+        ?bool $testStatus,
+        IStatus $status,
+        ?string $message,
+        ?string $moreInfo,
+        ?array $statusItems,
+        ?array $shipments,
+        ?array $reroutes,
+        ?array $rejections,
+        ?IExtension $extension
+    ) {
+        $this->setVersion(new Version());
+        $this->setOrderNo($orderNo);
+        $this->setFulfillerOrderNo($fulfillerOrderNo);
+        $this->setTestStatus($testStatus);
+        $this->setStatus($status);
+        $this->setMessage($message);
+        $this->setMoreInfo($moreInfo);
+        $this->setStatusItems($statusItems);
+        $this->setShipments($shipments);
+        $this->setReroutes($reroutes);
+        $this->setRejections($rejections);
+        $this->setExtension($extension);
+    }
+
 
     /**
      * Shutterfly protocol version, currently “3.0”
@@ -152,9 +193,9 @@ class OrderStatus
      * logged for diagnostic purposes, and not be persisted with other status
      * data.
      *
-     * @return string Fulfiller specified order identifier.
+     * @return null|string Fulfiller specified order identifier.
      */
-    public function getFulfillerOrderNo(): string
+    public function getFulfillerOrderNo(): ?string
     {
         return $this->fulfillerOrderNo;
     }
@@ -164,9 +205,9 @@ class OrderStatus
      * logged for diagnostic purposes, and not be persisted with other status
      * data.
      *
-     * @param string $fulfillerOrderNo Fulfiller specified order identifier.
+     * @param null|string $fulfillerOrderNo Fulfiller specified order identifier.
      */
-    public function setFulfillerOrderNo(string $fulfillerOrderNo): void
+    public function setFulfillerOrderNo(?string $fulfillerOrderNo): void
     {
         $this->fulfillerOrderNo = $fulfillerOrderNo;
     }
@@ -186,9 +227,9 @@ class OrderStatus
      * Boolean flag indicating this is a test status update. Test status
      * updates will be checked for correctness, but not processed.
      *
-     * @param bool $testStatus Boolean flag indicating this is a test status update.
+     * @param bool|null $testStatus Boolean flag indicating this is a test status update.
      */
-    public function setTestStatus(bool $testStatus): void
+    public function setTestStatus(?bool $testStatus): void
     {
         $this->testStatus = $testStatus;
     }
@@ -216,9 +257,9 @@ class OrderStatus
     /**
      * Optional message providing additional info about the status
      *
-     * @return string Optional message providing additional info about the status.
+     * @return string|null Optional message providing additional info about the status.
      */
-    public function getMessage(): string
+    public function getMessage(): ?string
     {
         return $this->message;
     }
@@ -226,9 +267,9 @@ class OrderStatus
     /**
      * Optional message providing additional info about the status.
      *
-     * @param string $message Optional message providing additional info about the status.
+     * @param string|null $message Optional message providing additional info about the status.
      */
-    public function setMessage(string $message): void
+    public function setMessage(?string $message): void
     {
         $this->message = $message;
     }
@@ -236,9 +277,9 @@ class OrderStatus
     /**
      * Optional data relevant to status.
      *
-     * @return string Optional data relevant to status.
+     * @return string|null Optional data relevant to status.
      */
-    public function getMoreInfo(): string
+    public function getMoreInfo(): ?string
     {
         return $this->moreInfo;
     }
@@ -247,9 +288,9 @@ class OrderStatus
      * Optional data relevant to status. Could contain an URL to access
      * additional data about the status of the order.
      *
-     * @param string $moreInfo Optional data relevant to status.
+     * @param string|null $moreInfo Optional data relevant to status.
      */
-    public function setMoreInfo(string $moreInfo): void
+    public function setMoreInfo(?string $moreInfo): void
     {
         $this->moreInfo = $moreInfo;
     }
@@ -257,9 +298,9 @@ class OrderStatus
     /**
      * List of items this status applies to.
      *
-     * @return StatusItem[] List of items this status applies to.
+     * @return StatusItem[]|null List of items this status applies to.
      */
-    public function getStatusItems(): array
+    public function getStatusItems(): ?array
     {
         return $this->statusItems;
     }
@@ -267,9 +308,9 @@ class OrderStatus
     /**
      * List of items this status applies to.
      *
-     * @param StatusItem[] $statusItems List of items this status applies to.
+     * @param StatusItem[]|null $statusItems List of items this status applies to.
      */
-    public function setStatusItems(array $statusItems): void
+    public function setStatusItems(?array $statusItems): void
     {
         $this->statusItems = $statusItems;
     }
@@ -277,17 +318,17 @@ class OrderStatus
     /**
      * List of Shipments.
      *
-     * @return Shipment[] List of shipments.
+     * @return Shipment[]|null List of shipments.
      */
-    public function getShipments(): array
+    public function getShipments(): ?array
     {
         return $this->shipments;
     }
 
     /**
-     * @param Shipment[] $shipments
+     * @param Shipment[]|null $shipments
      */
-    public function setShipments(array $shipments): void
+    public function setShipments(?array $shipments): void
     {
         $this->shipments = $shipments;
     }
@@ -295,9 +336,9 @@ class OrderStatus
     /**
      * List of reroutes.
      *
-     * @return Reroute[] List of reroutes.
+     * @return Reroute[]|null List of reroutes.
      */
-    public function getReroutes(): array
+    public function getReroutes(): ?array
     {
         return $this->reroutes;
     }
@@ -305,9 +346,9 @@ class OrderStatus
     /**
      * List of reroutes.
      *
-     * @param Reroute[] $reroutes List of reroutes.
+     * @param Reroute[]|null $reroutes List of reroutes.
      */
-    public function setReroutes(array $reroutes): void
+    public function setReroutes(?array $reroutes): void
     {
         $this->reroutes = $reroutes;
     }
@@ -315,9 +356,9 @@ class OrderStatus
     /**
      * List of rejections.
      *
-     * @return Rejection[] List of rejections.
+     * @return Rejection[]|null List of rejections.
      */
-    public function getRejections(): array
+    public function getRejections(): ?array
     {
         return $this->rejections;
     }
@@ -325,9 +366,9 @@ class OrderStatus
     /**
      * List of rejections. See section 8.5.1, “RejectedType Elements”
      *
-     * @param Rejection[] $rejections List of rejections.
+     * @param Rejection[]|null $rejections List of rejections.
      */
-    public function setRejections(array $rejections): void
+    public function setRejections(?array $rejections): void
     {
         $this->rejections = $rejections;
     }
@@ -337,9 +378,9 @@ class OrderStatus
      * used in the status query protocol, not the status update protocol. See
      * note below.
      *
-     * @return IExtension Wrapper around fulfiller specific content.
+     * @return null|IExtension Wrapper around fulfiller specific content.
      */
-    public function getExtension(): IExtension
+    public function getExtension(): ?IExtension
     {
         return $this->extension;
     }
@@ -349,9 +390,9 @@ class OrderStatus
      * used in the status query protocol, not the status update protocol. See
      * note below.
      *
-     * @param IExtension $extension Wrapper around fulfiller specific content.
+     * @param null|IExtension $extension Wrapper around fulfiller specific content.
      */
-    public function setExtension(IExtension $extension): void
+    public function setExtension(?IExtension $extension): void
     {
         $this->extension = $extension;
     }
