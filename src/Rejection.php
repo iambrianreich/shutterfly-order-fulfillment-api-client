@@ -47,7 +47,6 @@ class Rejection
         $this->setItems($items);
     }
 
-
     /**
      * Code for the reason the item was rejected.
      *
