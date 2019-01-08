@@ -9,7 +9,7 @@
 namespace RWC\Shutterfly\Rejection;
 
 
-abstract class AbstractReason
+abstract class AbstractReason implements IReason
 {
     /**
      * The Shutterfly rejection code.
