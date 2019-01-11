@@ -1,27 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="22cf9a04-74dc-4013-8b43-ef44391a2254" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Error.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Utility/DateConverter.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scratch/test.php" beforeDir="false" afterPath="$PROJECT_DIR$/scratch/test.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Client.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Client.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ItemStatus.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Items.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Status/Items.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OrderStatus.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Status/OrderStatus.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OrderStatuses.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Rejected.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Status/Rejected.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Rejections.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Status/Rejections.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Rerouted.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Status/Rerouted.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Reroutes.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Status/Reroutes.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Response.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Response.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Shipment.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Status/Shipment.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Shipments.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Status/Shipments.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Status/Item.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/StatusItem.php" beforeDir="false" afterPath="$PROJECT_DIR$/Status/StatusItem.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/StatusItems.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Status/StatusItems.php" afterDir="false" />
-    </list>
+    <list default="true" id="22cf9a04-74dc-4013-8b43-ef44391a2254" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,7 +38,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JSON" value="2" />
+          <entry key="JSON" value="3" />
           <entry key="PHP" value="142" />
           <entry key="PLAIN_TEXT" value="1" />
         </counts>
@@ -72,7 +52,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JSON" value="32" />
+          <entry key="JSON" value="33" />
           <entry key="PHP" value="43551" />
           <entry key="PLAIN_TEXT" value="89" />
         </counts>
@@ -81,11 +61,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Item.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-48">
-              <caret line="15" column="7" lean-forward="true" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
+              <caret line="15" column="7" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/composer.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="408">
+              <caret line="17" column="22" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -138,7 +127,6 @@
         <option value="$PROJECT_DIR$/src/Rejection/WontShip.php" />
         <option value="$PROJECT_DIR$/src/Rejection/Other.php" />
         <option value="$PROJECT_DIR$/src/IXmlFragment.php" />
-        <option value="$PROJECT_DIR$/composer.json" />
         <option value="$PROJECT_DIR$/src/Version.php" />
         <option value="$PROJECT_DIR$/src/AbstractXmlFragment.php" />
         <option value="$PROJECT_DIR$/src/IXmlDocument.php" />
@@ -176,6 +164,7 @@
         <option value="$PROJECT_DIR$/src/Status/Rejected.php" />
         <option value="$PROJECT_DIR$/src/Status/OrderStatus.php" />
         <option value="$PROJECT_DIR$/src/Status/Items.php" />
+        <option value="$PROJECT_DIR$/composer.json" />
       </list>
     </option>
   </component>
@@ -203,7 +192,7 @@
       <path value="$PROJECT_DIR$/vendor/psr/http-message" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1936" />
@@ -225,11 +214,6 @@
               <item name="shutterfly-order-fulfillment-api-client" type="b2602c69:ProjectViewProjectNode" />
               <item name="shutterfly-order-fulfillment-api-client" type="462c0819:PsiDirectoryNode" />
               <item name="scratch" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="shutterfly-order-fulfillment-api-client" type="b2602c69:ProjectViewProjectNode" />
-              <item name="shutterfly-order-fulfillment-api-client" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -280,12 +264,12 @@
       <workItem from="1546969822519" duration="8790000" />
       <workItem from="1547131400514" duration="386000" />
       <workItem from="1547148446932" duration="15162000" />
-      <workItem from="1547224232874" duration="9540000" />
+      <workItem from="1547224232874" duration="9594000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="51667000" />
+    <option name="totallyTimeSpent" value="51721000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -297,7 +281,8 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Structure" order="0" sideWeight="0.23863636" side_tool="true" visible="true" weight="0.26865673" />
       <window_info id="Favorites" order="1" side_tool="true" />
@@ -437,13 +422,6 @@
           <folding>
             <element signature="e#118#133#0#PHP" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/composer.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="17" column="23" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="23" />
         </state>
       </provider>
     </entry>
@@ -734,7 +712,14 @@
     <entry file="file://$PROJECT_DIR$/src/Item.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-48">
-          <caret line="15" column="7" lean-forward="true" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
+          <caret line="15" column="7" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/composer.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="17" column="22" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
         </state>
       </provider>
     </entry>

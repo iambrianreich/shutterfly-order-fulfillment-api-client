@@ -15,7 +15,7 @@
         }
     },
     "require": {
-        "ext-dom" : "",
+        "ext-dom" : "*",
         "guzzlehttp/guzzle": "~6.0"
     }
 }
