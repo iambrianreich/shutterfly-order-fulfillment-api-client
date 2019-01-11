@@ -2,44 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="22cf9a04-74dc-4013-8b43-ef44391a2254" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/scratch/test.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/AbstractXmlFragment.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Client.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Extension.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/IXmlDocument.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/IXmlFragment.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Rejected.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Rerouted.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Reroutes.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Response.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Shipments.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/StatusItems.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/breic.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/breic.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shutterfly-order-fulfillment-api-client.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shutterfly-order-fulfillment-api-client.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Error.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Utility/DateConverter.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Extensions/IExtension.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Extensions/IExtension.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OrderStatus.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/OrderStatus.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Rejection.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Rejections.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Rejection/AbstractReason.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Rejection/AbstractReason.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Rejection/Copyright.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Rejection/Copyright.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Rejection/Fraud.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Rejection/Fraud.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Rejection/IReason.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Rejection/IReason.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Rejection/ImageCorrupt.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Rejection/ImageCorrupt.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Rejection/ImageUnavailable.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Rejection/ImageUnavailable.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Rejection/LowResolution.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Rejection/LowResolution.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Rejection/Obscene.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Rejection/Obscene.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Rejection/Other.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Rejection/Other.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Rejection/WontShip.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Rejection/WontShip.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Reroute.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Shipment.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Shipment.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Status/AbstractStatus.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Status/AbstractStatus.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Status/IStatus.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Status/IStatus.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Status/Processing.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Status/Processing.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/StatusItem.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/StatusItem.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Version.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Version.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scratch/test.php" beforeDir="false" afterPath="$PROJECT_DIR$/scratch/test.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Client.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Client.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ItemStatus.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Items.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Status/Items.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/OrderStatus.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Status/OrderStatus.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/OrderStatuses.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Rejected.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Status/Rejected.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Rejections.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Status/Rejections.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Rerouted.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Status/Rerouted.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Reroutes.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Status/Reroutes.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Response.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Response.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Shipment.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Status/Shipment.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Shipments.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Status/Shipments.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Status/Item.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/StatusItem.php" beforeDir="false" afterPath="$PROJECT_DIR$/Status/StatusItem.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/StatusItems.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Status/StatusItems.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -66,7 +47,7 @@
       </usages-collector>
       <usages-collector id="statistics.php.new.class">
         <counts>
-          <entry key="PHP Class.type" value="72" />
+          <entry key="PHP Class.type" value="74" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -78,7 +59,7 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="JSON" value="2" />
-          <entry key="PHP" value="111" />
+          <entry key="PHP" value="142" />
           <entry key="PLAIN_TEXT" value="1" />
         </counts>
       </usages-collector>
@@ -92,119 +73,19 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JSON" value="32" />
-          <entry key="PHP" value="38820" />
-          <entry key="PLAIN_TEXT" value="21" />
+          <entry key="PHP" value="43551" />
+          <entry key="PLAIN_TEXT" value="89" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/OrderStatus.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2616">
-              <caret line="114" selection-start-line="114" selection-end-line="114" />
-              <folding>
-                <element signature="e#117#133#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
+        <entry file="file://$PROJECT_DIR$/src/Item.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="72">
-              <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Response.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="174">
-              <caret line="190" column="62" lean-forward="true" selection-start-line="190" selection-start-column="8" selection-end-line="190" selection-end-column="62" />
-              <folding>
-                <element signature="e#118#134#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Order.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1126" />
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/AbstractXmlFragment.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-629">
-              <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
-              <folding>
-                <element signature="e#118#134#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Extensions/IExtension.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="13" column="41" selection-start-line="13" selection-start-column="41" selection-end-line="13" selection-end-column="41" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Rejected.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-939">
-              <caret line="128" selection-start-line="128" selection-end-line="128" />
-              <folding>
-                <element signature="e#118#134#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Rejections.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="246">
-              <caret line="55" column="6" lean-forward="true" selection-end-line="95" selection-end-column="1" />
-              <folding>
-                <element signature="e#117#133#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Reroutes.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="71" column="11" selection-start-line="71" selection-start-column="11" selection-end-line="71" selection-end-column="11" />
-              <folding>
-                <element signature="e#117#133#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Rerouted.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="631">
-              <caret line="150" selection-start-line="150" selection-end-line="150" />
-              <folding>
-                <element signature="e#118#134#0#PHP" expanded="true" />
-              </folding>
+            <state relative-caret-position="-48">
+              <caret line="15" column="7" lean-forward="true" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -230,6 +111,9 @@
       <find>__con</find>
       <find>rejec</find>
       <find>rej</find>
+      <find>577</find>
+      <find>iserror</find>
+      <find>588</find>
     </findStrings>
     <dirStrings>
       <dir>C:\GitRepos\shutterfly-order-fulfillment-api-client\src</dir>
@@ -241,18 +125,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/Products/IProduct.php" />
-        <option value="$PROJECT_DIR$/src/Address.php" />
-        <option value="$PROJECT_DIR$/src/Property.php" />
-        <option value="$PROJECT_DIR$/src/Customize.php" />
-        <option value="$PROJECT_DIR$/src/Image.php" />
-        <option value="$PROJECT_DIR$/src/Document.php" />
-        <option value="$PROJECT_DIR$/src/Copyright.php" />
-        <option value="$PROJECT_DIR$/src/Status/Item.php" />
-        <option value="$PROJECT_DIR$/src/Reroute.php" />
-        <option value="$PROJECT_DIR$/src/Status/OrderRouted.php" />
-        <option value="$PROJECT_DIR$/src/Status/OrderUploaded.php" />
-        <option value="$PROJECT_DIR$/src/Status/OrderReceived.php" />
         <option value="$PROJECT_DIR$/src/Status/ImagesReceived.php" />
         <option value="$PROJECT_DIR$/src/Status/ReadyToShip.php" />
         <option value="$PROJECT_DIR$/src/Status/DoneProc.php" />
@@ -267,31 +139,43 @@
         <option value="$PROJECT_DIR$/src/Rejection/Other.php" />
         <option value="$PROJECT_DIR$/src/IXmlFragment.php" />
         <option value="$PROJECT_DIR$/composer.json" />
-        <option value="$PROJECT_DIR$/scratch/test.php" />
         <option value="$PROJECT_DIR$/src/Version.php" />
         <option value="$PROJECT_DIR$/src/AbstractXmlFragment.php" />
         <option value="$PROJECT_DIR$/src/IXmlDocument.php" />
-        <option value="$PROJECT_DIR$/src/Client.php" />
         <option value="$PROJECT_DIR$/src/Status/AbstractStatus.php" />
         <option value="$PROJECT_DIR$/src/Status/IStatus.php" />
         <option value="$PROJECT_DIR$/src/Status/Processing.php" />
-        <option value="$PROJECT_DIR$/src/StatusItem.php" />
-        <option value="$PROJECT_DIR$/src/Shipment.php" />
         <option value="$PROJECT_DIR$/src/Rejection/AbstractReason.php" />
         <option value="$PROJECT_DIR$/src/Rejection/IReason.php" />
         <option value="$PROJECT_DIR$/src/Extension.php" />
         <option value="$PROJECT_DIR$/src/StatusItems.php" />
         <option value="$PROJECT_DIR$/src/Shipments.php" />
-        <option value="$PROJECT_DIR$/src/Rerouted.php" />
-        <option value="$PROJECT_DIR$/src/Items.php" />
-        <option value="$PROJECT_DIR$/src/Rejected.php" />
         <option value="$PROJECT_DIR$/src/Rejection.php" />
         <option value="$PROJECT_DIR$/src/Rejections.php" />
         <option value="$PROJECT_DIR$/src/Extensions/IExtension.php" />
-        <option value="$PROJECT_DIR$/src/Response.php" />
         <option value="$PROJECT_DIR$/src/Reroutes.php" />
-        <option value="$PROJECT_DIR$/src/OrderStatus.php" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/src/OrderStatus.php" />
+        <option value="$PROJECT_DIR$/src/Client.php" />
+        <option value="$PROJECT_DIR$/src/Response.php" />
+        <option value="$PROJECT_DIR$/src/Error.php" />
+        <option value="$PROJECT_DIR$/src/Utility/DateConverter.php" />
+        <option value="$PROJECT_DIR$/src/Rejected.php" />
+        <option value="$PROJECT_DIR$/src/Status/Item.php" />
+        <option value="$PROJECT_DIR$/src/Shipment.php" />
+        <option value="$PROJECT_DIR$/src/Items.php" />
+        <option value="$PROJECT_DIR$/src/StatusItem.php" />
+        <option value="$PROJECT_DIR$/scratch/test.php" />
+        <option value="$PROJECT_DIR$/src/Status/StatusItems.php" />
+        <option value="$PROJECT_DIR$/src/Status/Shipment.php" />
+        <option value="$PROJECT_DIR$/src/Status/Shipments.php" />
+        <option value="$PROJECT_DIR$/src/Status/Reroutes.php" />
+        <option value="$PROJECT_DIR$/src/Status/Rejections.php" />
+        <option value="$PROJECT_DIR$/src/Rerouted.php" />
+        <option value="$PROJECT_DIR$/src/Status/Rerouted.php" />
+        <option value="$PROJECT_DIR$/src/Status/Rejected.php" />
+        <option value="$PROJECT_DIR$/src/Status/OrderStatus.php" />
+        <option value="$PROJECT_DIR$/src/Status/Items.php" />
       </list>
     </option>
   </component>
@@ -305,7 +189,7 @@
     <option name="filePaths">
       <list>
         <option value="$PROJECT_DIR$/src/Client.php" />
-        <option value="$PROJECT_DIR$/src/OrderStatus.php" />
+        <option value="$PROJECT_DIR$/src/Status/OrderStatus.php" />
       </list>
     </option>
   </component>
@@ -319,7 +203,7 @@
       <path value="$PROJECT_DIR$/vendor/psr/http-message" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1936" />
@@ -337,6 +221,16 @@
               <item name="shutterfly-order-fulfillment-api-client" type="b2602c69:ProjectViewProjectNode" />
               <item name="shutterfly-order-fulfillment-api-client" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="shutterfly-order-fulfillment-api-client" type="b2602c69:ProjectViewProjectNode" />
+              <item name="shutterfly-order-fulfillment-api-client" type="462c0819:PsiDirectoryNode" />
+              <item name="scratch" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="shutterfly-order-fulfillment-api-client" type="b2602c69:ProjectViewProjectNode" />
+              <item name="shutterfly-order-fulfillment-api-client" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -350,6 +244,12 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\GitRepos\shutterfly-order-fulfillment-api-client\Status" />
+      <recent name="C:\GitRepos\shutterfly-order-fulfillment-api-client\src\Status" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -380,27 +280,35 @@
       <workItem from="1546969822519" duration="8790000" />
       <workItem from="1547131400514" duration="386000" />
       <workItem from="1547148446932" duration="15162000" />
-      <workItem from="1547224232874" duration="3365000" />
+      <workItem from="1547224232874" duration="9540000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="45492000" />
+    <option name="totallyTimeSpent" value="51667000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
     <layout>
-      <window_info id="Structure" order="0" sideWeight="0.23898305" side_tool="true" visible="true" weight="0.26865673" />
+      <window_info id="Structure" order="0" sideWeight="0.23863636" side_tool="true" visible="true" weight="0.26865673" />
       <window_info id="Favorites" order="1" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="2" sideWeight="0.76101696" visible="true" weight="0.26865673" />
+      <window_info active="true" content_ui="combo" id="Project" order="2" sideWeight="0.7613636" visible="true" weight="0.26865673" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" visible="true" weight="0.32954547" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32954547" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32954547" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
@@ -419,48 +327,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Copyright.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="14" column="26" lean-forward="true" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/OrderStatuses.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="20" column="19" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Item.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="861">
-          <caret line="100" column="25" lean-forward="true" selection-start-line="100" selection-start-column="25" selection-end-line="100" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Status/Item.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="18" column="23" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Status/OrderUploaded.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Status/OrderReceived.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Status/ImagesReceived.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
@@ -591,24 +457,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scratch/test.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="14" column="29" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/IXmlDocument.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="141">
           <caret line="14" column="1" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Client.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="661">
-          <caret line="67" column="25" selection-start-line="67" selection-start-column="25" selection-end-line="67" selection-end-column="25" />
         </state>
       </provider>
     </entry>
@@ -633,27 +485,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Processing.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="16" column="6" selection-start-line="16" selection-start-column="6" selection-end-line="16" selection-end-column="6" />
-          <folding>
-            <element signature="e#6#212#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Status/Processing.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
           <caret line="8" column="32" selection-start-line="8" selection-start-column="32" selection-end-line="8" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ItemStatus.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="22" column="40" lean-forward="true" selection-start-line="22" selection-start-column="40" selection-end-line="22" selection-end-column="40" />
         </state>
       </provider>
     </entry>
@@ -679,66 +514,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Shipment.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="13632">
-          <caret line="574" column="10" selection-start-line="574" selection-start-column="10" selection-end-line="574" selection-end-column="10" />
-          <folding>
-            <element signature="e#117#133#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/StatusItem.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4824">
-          <caret line="207" column="5" selection-start-line="207" selection-start-column="5" selection-end-line="207" selection-end-column="5" />
-          <folding>
-            <element signature="e#117#133#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Extension.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="213">
-          <caret line="19" column="32" selection-start-line="19" selection-start-column="32" selection-end-line="19" selection-end-column="32" />
-          <folding>
-            <element signature="e#119#135#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/StatusItems.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="717">
-          <caret line="60" column="5" lean-forward="true" selection-start-line="52" selection-start-column="4" selection-end-line="60" selection-end-column="5" />
-          <folding>
-            <element signature="e#118#134#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Shipments.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="381">
-          <caret line="52" column="4" lean-forward="true" selection-start-line="52" selection-start-column="4" selection-end-line="60" selection-end-column="5" />
-          <folding>
-            <element signature="e#118#134#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Items.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="576">
-          <caret line="59" column="44" lean-forward="true" selection-start-line="59" selection-start-column="44" selection-end-line="59" selection-end-column="44" />
-          <folding>
-            <element signature="e#118#134#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Extensions/IExtension.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="192">
@@ -761,70 +536,205 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Response.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="190" column="62" lean-forward="true" selection-start-line="190" selection-start-column="8" selection-end-line="190" selection-end-column="62" />
-          <folding>
-            <element signature="e#118#134#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Rerouted.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="631">
-          <caret line="150" selection-start-line="150" selection-end-line="150" />
-          <folding>
-            <element signature="e#118#134#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Rejected.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-939">
-          <caret line="128" selection-start-line="128" selection-end-line="128" />
-          <folding>
-            <element signature="e#118#134#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Rejections.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="246">
-          <caret line="55" column="6" lean-forward="true" selection-end-line="95" selection-end-column="1" />
-          <folding>
-            <element signature="e#117#133#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Reroutes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="71" column="11" selection-start-line="71" selection-start-column="11" selection-end-line="71" selection-end-column="11" />
-          <folding>
-            <element signature="e#117#133#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/OrderStatus.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2616">
-          <caret line="114" selection-start-line="114" selection-end-line="114" />
-          <folding>
-            <element signature="e#117#133#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
           <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Response.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="126" column="25" selection-start-line="126" selection-start-column="25" selection-end-line="126" selection-end-column="25" />
+          <folding>
+            <element signature="e#118#134#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Error.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-21">
+          <caret line="83" column="6" selection-start-line="83" selection-start-column="6" selection-end-line="83" selection-end-column="6" />
+          <folding>
+            <element signature="e#119#135#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Client.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="58" column="11" selection-start-line="58" selection-start-column="11" selection-end-line="58" selection-end-column="11" />
+          <folding>
+            <element signature="e#117#148#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Extension.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="26" column="11" selection-start-line="26" selection-start-column="11" selection-end-line="26" selection-end-column="11" />
+          <folding>
+            <element signature="e#119#135#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Utility/DateConverter.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="23" column="29" selection-start-line="23" selection-start-column="29" selection-end-line="23" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Status/Item.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1128">
+          <caret line="128" column="28" lean-forward="true" selection-start-line="128" selection-start-column="28" selection-end-line="128" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Status/StatusItem.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="358">
+          <caret line="51" column="97" selection-start-line="51" selection-start-column="97" selection-end-line="51" selection-end-column="97" />
+          <folding>
+            <element signature="e#117#133#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scratch/test.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Status/StatusItems.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="17" column="6" selection-start-line="17" selection-start-column="6" selection-end-line="17" selection-end-column="6" />
+          <folding>
+            <element signature="e#125#141#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Status/Shipment.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+          <folding>
+            <element signature="e#117#133#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Status/Shipments.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="17" column="6" selection-start-line="17" selection-start-column="6" selection-end-line="17" selection-end-column="6" />
+          <folding>
+            <element signature="e#118#134#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Status/Reroutes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+          <folding>
+            <element signature="e#124#140#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Status/Rejections.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="17" column="6" selection-start-line="17" selection-start-column="6" selection-end-line="17" selection-end-column="6" />
+          <folding>
+            <element signature="e#124#140#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TestOrder.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Status/Rerouted.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="18" column="6" selection-start-line="18" selection-start-column="6" selection-end-line="18" selection-end-column="6" />
+          <folding>
+            <element signature="e#118#134#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Status/Rejected.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="271">
+          <caret line="27" column="6" selection-start-line="27" selection-start-column="6" selection-end-line="27" selection-end-column="6" />
+          <folding>
+            <element signature="e#118#134#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Processing.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-24">
+          <caret line="16" column="6" selection-start-line="16" selection-start-column="6" selection-end-line="16" selection-end-column="6" />
+          <folding>
+            <element signature="e#6#212#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/OrderStatuses.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-99">
+          <caret line="23" column="42" lean-forward="true" selection-start-line="23" selection-start-column="42" selection-end-line="23" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Status/OrderStatus.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="271">
+          <caret line="34" column="6" selection-start-line="34" selection-start-column="6" selection-end-line="34" selection-end-column="6" />
+          <folding>
+            <element signature="e#124#140#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Status/Items.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="17" column="6" selection-start-line="17" selection-start-column="6" selection-end-line="17" selection-end-column="6" />
+          <folding>
+            <element signature="e#125#141#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ItemStatus.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="307">
+          <caret line="52" column="22" selection-start-line="52" selection-start-column="22" selection-end-line="52" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Item.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-48">
+          <caret line="15" column="7" lean-forward="true" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
         </state>
       </provider>
     </entry>

@@ -6,11 +6,14 @@
  * Time: 1:57 PM
  */
 
-namespace RWC\Shutterfly;
+namespace RWC\Shutterfly\Status;
 
 
 use DOMDocument;
 use DOMElement;
+use RWC\Shutterfly\AbstractXmlFragment;
+use RWC\Shutterfly\IXmlFragment;
+use RWC\Shutterfly\Status\Rejected;
 
 class Rejections extends AbstractXmlFragment
 {

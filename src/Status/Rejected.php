@@ -6,11 +6,14 @@
  * Time: 9:47 AM
  */
 
-namespace RWC\Shutterfly;
+namespace RWC\Shutterfly\Status;
 
 
 use DOMDocument;
 use DOMElement;
+use RWC\Shutterfly\AbstractXmlFragment;
+use RWC\Shutterfly\Status\Items;
+use RWC\Shutterfly\IXmlFragment;
 use RWC\Shutterfly\Rejection\Copyright;
 use RWC\Shutterfly\Rejection\Fraud;
 use RWC\Shutterfly\Rejection\ImageCorrupt;
@@ -20,6 +23,7 @@ use RWC\Shutterfly\Rejection\LowResolution;
 use RWC\Shutterfly\Rejection\Obscene;
 use RWC\Shutterfly\Rejection\Other;
 use RWC\Shutterfly\Rejection\WontShip;
+use RWC\Shutterfly\Utility\DateConverter;
 
 class Rejected extends AbstractXmlFragment
 {
@@ -158,8 +162,8 @@ class Rejected extends AbstractXmlFragment
                 'date is a required sub-element'
             );
         }
-        // TODO Date conversion
-        $date = self::getFirstChild($element, 'date')->textContent;
+        $date = DateConverter::from(
+            self::getFirstChild($element, 'date')->textContent);
 
         // items is required
         if (! self::hasChild($element, 'items')) {
@@ -185,8 +189,7 @@ class Rejected extends AbstractXmlFragment
         $rejected = $document->createElement('rejected');
         $rejected->appendChild($document->createElement('reasonCode', $this->getReason()->getCode()));
         $rejected->appendChild($document->createElement('reason', $this->getReason()->getReason()));
-        // TODO Date conversion
-        $rejected->appendChild($document->createElement('date', $this->getDate()));
+        $rejected->appendChild($document->createElement('date', DateConverter::to($this->getDate())));
         $rejected->appendChild($this->getItems()->toDomElement($document));
         return $rejected;
     }

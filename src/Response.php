@@ -32,13 +32,13 @@ class Response extends AbstractXmlFragment implements IXmlDocument
     protected $success;
 
     /**
-     * Error message, if any.
+     * Error details, if any.
      *
-     * @var null|string
+     * @var Error|null
      */
     protected $error;
 
-    public function __construct(?Version $version, ?string $success, ?string $error)
+    public function __construct(?Version $version, ?string $success, ?Error $error)
     {
         $version = $version ?? Version::getCurrentVersion();
 
@@ -90,9 +90,9 @@ class Response extends AbstractXmlFragment implements IXmlDocument
     /**
      * Returns the error message if any.
      *
-     * @return null|string Returns the error message if any.
+     * @return null|Error Returns the error message if any.
      */
-    public function getError(): ?string
+    public function getError(): ?Error
     {
         return $this->error;
     }
@@ -100,9 +100,9 @@ class Response extends AbstractXmlFragment implements IXmlDocument
     /**
      * Sets the error message if any.
      *
-     * @param null|string $error The error message if any.
+     * @param null|Error $error The error message if any.
      */
-    public function setError(?string $error): void
+    public function setError(?Error $error): void
     {
         $this->error = $error;
     }
@@ -124,14 +124,13 @@ class Response extends AbstractXmlFragment implements IXmlDocument
      */
     public function isError() : bool
     {
-        return ! empty($this->getError());
+        return ! is_null($this->getError());
     }
 
     public static function fromXmlString(string $xml) : IXmlDocument
     {
         $dom = new DOMDocument();
         $dom->loadXML($xml);
-
 
         /** @var Response $response */
         $response = self::fromDomElement($dom->documentElement);
@@ -166,10 +165,10 @@ class Response extends AbstractXmlFragment implements IXmlDocument
             $messageNode = self::getFirstChild($successNode, 'message');
             $success = $messageNode->textContent;
         } else if (self::hasChild($response, 'error')) {
-            // get error/message/<value>
-            $errorNode = self::getFirstChild($response, 'error');
-            $messageNode = self::getFirstChild($errorNode, 'message');
-            $error = $messageNode->textContent;
+
+            $errorEl = self::getFirstChild($response, 'error');
+            /** @var Error $error */
+            $error = Error::fromDomElement($errorEl);
         } else {
             throw new \InvalidArgumentException(
                 'Either <success/> or <error/> is required.'

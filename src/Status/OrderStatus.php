@@ -6,12 +6,16 @@
  * Time: 1:22 PM
  */
 
-namespace RWC\Shutterfly;
+namespace RWC\Shutterfly\Status;
 
 
 use DOMDocument;
 use DOMElement;
+use RWC\Shutterfly\AbstractXmlFragment;
+use RWC\Shutterfly\Extension;
 use RWC\Shutterfly\Extensions\IExtension;
+use RWC\Shutterfly\IXmlDocument;
+use RWC\Shutterfly\IXmlFragment;
 use RWC\Shutterfly\Status\Complete;
 use RWC\Shutterfly\Status\DoneProc;
 use RWC\Shutterfly\Status\ImagesReceived;
@@ -21,6 +25,12 @@ use RWC\Shutterfly\Status\OrderRouted;
 use RWC\Shutterfly\Status\OrderUploaded;
 use RWC\Shutterfly\Status\Processing;
 use RWC\Shutterfly\Status\ReadyToShip;
+use RWC\Shutterfly\Status\Rejections;
+use RWC\Shutterfly\Status\Rerouted;
+use RWC\Shutterfly\Status\Reroutes;
+use RWC\Shutterfly\Status\Shipments;
+use RWC\Shutterfly\Status\StatusItems;
+use RWC\Shutterfly\Version;
 
 class OrderStatus extends AbstractXmlFragment implements IXmlDocument
 {
@@ -574,7 +584,7 @@ class OrderStatus extends AbstractXmlFragment implements IXmlDocument
         if (! empty($this->getMoreInfo())) {
             $orderStatusEl->appendChild($document->createElement(
                 'moreInfo',
-                $this->$this->getMoreInfo()
+                $this->getMoreInfo()
             ));
         }
 

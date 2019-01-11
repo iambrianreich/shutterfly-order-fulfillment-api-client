@@ -9,6 +9,9 @@
 namespace RWC\Shutterfly;
 
 use GuzzleHttp\ClientInterface;
+use GuzzleHttp\Exception\ClientException;
+use GuzzleHttp\Exception\GuzzleException;
+use RWC\Shutterfly\Status\OrderStatus;
 
 class Client
 {
@@ -17,15 +20,19 @@ class Client
      */
     protected $client;
 
-    public function __constructor()
+    /**
+     * @param ClientInterface|null $client
+     */
+    public function __construct(?ClientInterface $client = null)
     {
-        $this->setClient(new \GuzzleHttp\Client());
+        $client = $client ?? new \GuzzleHttp\Client();
+        $this->setClient($client);
     }
 
     /**
      * @return ClientInterface
      */
-    public function getClient(): ClientInterface
+    public function getClient() : ClientInterface
     {
         return $this->client;
     }
@@ -51,20 +58,31 @@ class Client
     public function sendStatusRequest(OrderStatus $orderStatus) : Response
     {
         // TODO How to inject correct URL?
-        $httpResponse = $this->getClient()->request(
-            'POST',
-            $this->getUrl(),
-            [
-                'body' => $orderStatus->toXml(),
-                'headers' => [
-                    'Content-Type' => 'text/xml'
+        try {
+            $httpResponse = $this->getClient()->request(
+                'POST',
+                $this->getUrl(),
+                [
+                    'body' => $orderStatus->toXml(),
+                    'headers' => [
+                        'Content-Type' => 'text/xml'
+                    ]
                 ]
-            ]
-        );
+            );
 
-        $xml = (string) $httpResponse->getBody();
-        /** @var Response $response */
-        $response = Response::fromXmlString($xml);
-        return $response;
+            $xml = (string) $httpResponse->getBody();
+            /** @var Response $response */
+            $response = Response::fromXmlString($xml);
+            return $response;
+
+        } catch (ClientException $clientError) {
+           if ($clientError->hasResponse()) {
+               $xml = (string) $clientError->getResponse()->getBody();
+
+               /** @var Response $response */
+               $response = Response::fromXmlString($xml);
+               return $response;
+           }
+        }
     }
 }

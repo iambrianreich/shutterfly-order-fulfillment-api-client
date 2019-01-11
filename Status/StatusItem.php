@@ -49,7 +49,7 @@ class StatusItem extends AbstractXmlFragment
      * @param int $quantity
      * @param null|string $notes
      */
-    public function __construct(string $itemNo, string $sku, int $quantity, ?string $notes)
+    public function __construct(string $itemNo, string $sku, int $quantity, ?string $notes = null)
     {
         $this->setItemNo($itemNo);
         $this->setSku($sku);

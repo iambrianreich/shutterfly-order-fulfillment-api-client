@@ -6,11 +6,14 @@
  * Time: 8:15 AM
  */
 
-namespace RWC\Shutterfly;
+namespace RWC\Shutterfly\Status;
 
 
 use DOMDocument;
 use DOMElement;
+use RWC\Shutterfly\AbstractXmlFragment;
+use RWC\Shutterfly\IXmlFragment;
+use RWC\Shutterfly\Status\Shipment;
 
 class Shipments extends AbstractXmlFragment
 {

@@ -6,11 +6,16 @@
  * Time: 1:39 PM
  */
 
-namespace RWC\Shutterfly;
+namespace RWC\Shutterfly\Status;
 
 
 use DOMDocument;
 use DOMElement;
+use RWC\Shutterfly\AbstractXmlFragment;
+use RWC\Shutterfly\Status\Items;
+use RWC\Shutterfly\IXmlFragment;
+use RWC\Shutterfly\StatusItem;
+use RWC\Shutterfly\Utility\DateConverter;
 
 class Shipment extends AbstractXmlFragment
 {
@@ -106,14 +111,14 @@ class Shipment extends AbstractXmlFragment
      * The date the shipment items were ready to ship. Set and returned as a
      * UNIT timestamp.
      *
-     * @var int
+     * @var int|null
      */
     protected $readyToShipDate;
 
     /**
      * List of items in this shipment. See section 8.6.1 “ItemType Elements”
      *
-     * @var Status\Item[]  List of items in this shipment.
+     * @var Items  List of items in this shipment.
      */
     protected $items;
 
@@ -131,8 +136,8 @@ class Shipment extends AbstractXmlFragment
      * @param null|string $expectedCarrier
      * @param null|string $expectedMethod
      * @param int|null $expectedTransitDays
-     * @param int $readyToShipDate
-     * @param Status\Item[] $items
+     * @param int|null $readyToShipDate
+     * @param Items $items
      */
     public function __construct(
         string $shipmentNo,
@@ -147,8 +152,8 @@ class Shipment extends AbstractXmlFragment
         ?string $expectedCarrier,
         ?string $expectedMethod,
         ?int $expectedTransitDays,
-        int $readyToShipDate,
-        array $items
+        ?int $readyToShipDate,
+        Items $items
     ) {
         $this->setShipmentNo($shipmentNo);
         $this->setShipmentDate($shipmentDate);
@@ -429,9 +434,9 @@ class Shipment extends AbstractXmlFragment
     /**
      * List of items in this shipment.
      *
-     * @return Status\Item[] List of items in this shipment.
+     * @return Items List of items in this shipment.
      */
-    public function getItems(): array
+    public function getItems(): Items
     {
         return $this->items;
     }
@@ -439,9 +444,9 @@ class Shipment extends AbstractXmlFragment
     /**
      * List of items in this shipment. See section 8.6.1 “ItemType Elements
      *
-     * @param Status\Item[] $items List of items in this shipment.
+     * @param Items $items List of items in this shipment.
      */
-    public function setItems(array $items): void
+    public function setItems(Items $items): void
     {
         $this->items = $items;
     }
@@ -468,8 +473,8 @@ class Shipment extends AbstractXmlFragment
                 'shipDate is a required sub-element'
             );
         }
-        // TODO How to convert shipDate?
-        $shipDate = self::getFirstChild($element, 'shipDate')->textContent;
+        $shipDate = DateConverter::from(
+            self::getFirstChild($element, 'shipDate')->textContent);
 
         //trackingNo is optional, but in reality needs to be set.
         $trackingNo = null;
@@ -515,8 +520,9 @@ class Shipment extends AbstractXmlFragment
         // expectedShipDate is optional
         $expectedShipDate = null;
         if (self::hasChild($element, 'expectedShipDate')) {
-            // TODO Date conversion?
-            $expectedShipDate = self::getFirstChild($element, 'expectedShipDate')->textContent;
+            $expectedShipDate = DateConverter::from(
+                self::getFirstChild($element, 'expectedShipDate')->textContent
+            );
         }
 
         // expectedCarrier is optional
@@ -540,8 +546,9 @@ class Shipment extends AbstractXmlFragment
         // readyToShipDate is optional
         $readyToShipDate = null;
         if (self::hasChild($element, 'readyToShipDate')) {
-            // TODO date translation?
-            $readyToShipDate = self::getFirstChild($element, 'readyToShipDate')->textContent;
+            $readyToShipDate = DateConverter::from(
+                self::getFirstChild($element, 'readyToShipDate')->textContent
+            );
         }
 
         // items is required
@@ -559,7 +566,7 @@ class Shipment extends AbstractXmlFragment
 
         return new Shipment(
             $shipmentNo,
-            $shipmentDate,
+            $shipDate,
             $trackingNo,
             $carrier,
             $method,
@@ -583,6 +590,78 @@ class Shipment extends AbstractXmlFragment
      */
     public function toDomElement(DOMDocument $document): DOMElement
     {
-        // TODO: Implement toDomElement() method.
+        $element = $document->createElement('shipment');
+        $element->appendChild($document->createElement('shipmentNo', $this->getShipmentNo()));
+        $element->appendChild($document->createElement('shipDate', DateConverter::to($this->getShipmentDate())));
+
+        if (! empty($this->getTrackingNo())) {
+            $element->appendChild($document->createElement(
+                'trackingNo',
+                $this->getTrackingNo()
+            ));
+        }
+
+        $element->appendChild($document->createElement('carrier', $this->getCarrier()));
+        $element->appendChild($document->createElement('method', $this->getMethod()));
+
+        if (! empty($this->getPackagingNo())) {
+            $element->appendChild($document->createElement(
+                'packagingNo',
+                $this->getPackagingNo()
+            ));
+        }
+
+        if ($this->getCost() != null) {
+            $element->appendChild($document->createElement(
+                'cost',
+                $this->getCost()
+            ));
+        }
+
+        if ($this->getWeight() != null) {
+            $element->appendChild($document->createElement(
+                'weight',
+                $this->getWeight()
+            ));
+        }
+
+        if (! empty($this->getExpectedShipDate())) {
+            $element->appendChild($document->createElement(
+                'expectedShipDate',
+                DateConverter::to($this->getExpectedShipDate())
+            ));
+        }
+
+        if (! empty($this->getExpectedCarrier())) {
+            $element->appendChild($document->createElement(
+                'expectedCarrier',
+                $this->getExpectedCarrier()
+            ));
+        }
+
+        if (! empty($this->getExpectedMethod())) {
+            $element->appendChild($document->createElement(
+                'expectedMethod',
+                $this->getExpectedMethod()
+            ));
+        }
+
+        if (! empty($this->getExpectedTransitDays())) {
+            $element->appendChild($document->createElement(
+                'expectedTransitdays',
+                $this->getExpectedTransitDays()
+            ));
+        }
+
+        if (! empty($this->getReadyToShipDate())) {
+            $element->appendChild($document->createElement(
+                'readyToShipDate',
+                DateConverter::to($this->getReadyToShipDate())
+            ));
+        }
+
+        $element->appendChild($this->getItems()->toDomElement($document));
+
+        return $element;
     }
 }

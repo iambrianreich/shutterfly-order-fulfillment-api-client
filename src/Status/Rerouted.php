@@ -6,11 +6,15 @@
  * Time: 9:07 AM
  */
 
-namespace RWC\Shutterfly;
+namespace RWC\Shutterfly\Status;
 
 
 use DOMDocument;
 use DOMElement;
+use RWC\Shutterfly\AbstractXmlFragment;
+use RWC\Shutterfly\Status\Items;
+use RWC\Shutterfly\IXmlFragment;
+use RWC\Shutterfly\Utility\DateConverter;
 
 class Rerouted extends AbstractXmlFragment
 {
@@ -146,7 +150,7 @@ class Rerouted extends AbstractXmlFragment
      */
     public function hasItems() : bool
     {
-        return count($this->getItems()->hasItems()) > 0;
+        return $this->getItems()->hasItems() > 0;
     }
 
     /**
@@ -169,14 +173,12 @@ class Rerouted extends AbstractXmlFragment
                 'date is a required sub-element'
             );
         }
-        // TODO date conversion
-        $date = self::getFirstChild($element, 'date')->textContent;
+        $date = DateConverter::from(self::getFirstChild($element, 'date')->textContent);
 
         // expires is optional.
         $expires = null;
         if (self::hasChild($element, 'expires')) {
-            // TODO Date conversion
-            $expires = self::getFirstChild($element, 'expires')->textContent;
+            $expires = DateConverter::from(self::getFirstChild($element, 'expires')->textContent);
         }
 
         // items is required
@@ -210,18 +212,16 @@ class Rerouted extends AbstractXmlFragment
         }
 
         // date is required
-        // TODO date conversion?
         $rerouted->appendChild($document->createElement(
             'date',
-                $this->getDate()
+            DateConverter::to($this->getDate())
         ));
 
         // expires is optional
-        // TODO Date conversion
         if (null != $this->getExpires()) {
             $rerouted->appendChild($document->createElement(
                 'expires',
-                $this->getExpires()
+                DateConverter::to($this->getExpires())
             ));
         }
 
