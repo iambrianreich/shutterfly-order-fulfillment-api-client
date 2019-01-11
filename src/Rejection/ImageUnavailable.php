@@ -14,6 +14,6 @@ class ImageUnavailable extends AbstractReason
     public function __construct()
     {
         $this->setCode('IMAGE_UNAVAIL');
-        $this->setDescription('One or more images in the item could not be retrieved from Shutterfly.');
+        $this->setReason('One or more images in the item could not be retrieved from Shutterfly.');
     }
 }

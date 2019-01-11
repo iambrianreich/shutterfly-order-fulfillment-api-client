@@ -14,6 +14,6 @@ class Other extends AbstractReason
     public function __construct()
     {
         $this->setCode('OTHER');
-        $this->setDescription('Any other reason for rejecting an item.)');
+        $this->setReason('Any other reason for rejecting an item.)');
     }
 }

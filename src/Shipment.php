@@ -9,7 +9,10 @@
 namespace RWC\Shutterfly;
 
 
-class Shipment
+use DOMDocument;
+use DOMElement;
+
+class Shipment extends AbstractXmlFragment
 {
     /**
      * Fulfiller specified shipment identifier, unique within the scope of the
@@ -441,5 +444,145 @@ class Shipment
     public function setItems(array $items): void
     {
         $this->items = $items;
+    }
+
+    /**
+     * Creates an instance of the IXMLFragment from a DOMElement.
+     *
+     * @param DOMElement $element The DOMElement to translate.
+     * @return IXmlFragment Returns the translates IXmlFragment.
+     */
+    public static function fromDomElement(DOMElement $element): IXmlFragment
+    {
+        // shipmentNo is required
+        if (! self::hasChild($element,'shipmentNo')) {
+            throw new \InvalidArgumentException(
+                'shipmentNo is a required sub-element'
+            );
+        }
+        $shipmentNo = self::getFirstChild($element, 'shipmentNo')->textContent;
+
+        // shipDate is required
+        if (! self::hasChild($element, 'shipDate')) {
+            throw new \InvalidArgumentException(
+                'shipDate is a required sub-element'
+            );
+        }
+        // TODO How to convert shipDate?
+        $shipDate = self::getFirstChild($element, 'shipDate')->textContent;
+
+        //trackingNo is optional, but in reality needs to be set.
+        $trackingNo = null;
+        if (self::hasChild($element, 'trackingNo')) {
+            $trackingNo = self::getFirstChild($element, 'trackingNo')->textContent;
+        }
+
+        // carrier is required.
+        if (! self::hasChild($element, 'carrier')) {
+            throw new \InvalidArgumentException(
+                'carrier is a required sub-element'
+            );
+        }
+        // TODO carrier validation?
+        $carrier = self::getFirstChild($element, 'carrier')->textContent;
+
+        // method is required
+        if (! self::hasChild($element, 'method')) {
+            throw new \InvalidArgumentException(
+                'method is a required sub-element'
+            );
+        }
+        $method = self::getFirstChild($element, 'method')->textContent;
+
+        // packagingNo is optional
+        $packagingNo = null;
+        if (self::hasChild($element, 'packagingNo')) {
+            $packagingNo = self::getFirstChild($element, 'packagingNo')->textContent;
+        }
+
+        // cost is optional
+        $cost = null;
+        if (self::hasChild($element, 'cost')) {
+            $cost = self::getFirstChild($element, 'cost')->textContent;
+        }
+
+        // weight is optional
+        $weight = null;
+        if (self::hasChild($element, 'weight')) {
+            $weight = self::getFirstChild($element, 'weight')->textContent;
+        }
+
+        // expectedShipDate is optional
+        $expectedShipDate = null;
+        if (self::hasChild($element, 'expectedShipDate')) {
+            // TODO Date conversion?
+            $expectedShipDate = self::getFirstChild($element, 'expectedShipDate')->textContent;
+        }
+
+        // expectedCarrier is optional
+        $expectedCarrier = null;
+        if (self::hasChild($element, 'expectedCarrier')) {
+            $expectedCarrier = self::getFirstChild($element, 'expectedCarrier')->textContent;
+        }
+
+        // expectedMethod is optional
+        $expectedMethod = null;
+        if (self::hasChild($element, 'expectedMethod')) {
+            $expectedMethod = self::getFirstChild($element, 'expectedMethod')->textContent;
+        }
+
+        // expectedTransitDays is optional
+        $expectedTransitDays = null;
+        if (self::hasChild($element, 'expectedTransitDays')) {
+            $expectedTransitDays = self::getFirstChild($element, 'expectedTransitDays')->textContent;
+        }
+
+        // readyToShipDate is optional
+        $readyToShipDate = null;
+        if (self::hasChild($element, 'readyToShipDate')) {
+            // TODO date translation?
+            $readyToShipDate = self::getFirstChild($element, 'readyToShipDate')->textContent;
+        }
+
+        // items is required
+        if (! self::hasChild($element, 'items')) {
+            throw new \InvalidArgumentException(
+                'items is a required sub-element'
+            );
+        }
+        $items = [];
+        $itemsEl = self::getFirstChild($element, 'items');
+        $itemEls = $itemsEl->getElementsByTagName('item');
+        foreach ($itemEls as $itemEl) {
+            $items[] = StatusItem::fromDomElement($itemEl);
+        }
+
+        return new Shipment(
+            $shipmentNo,
+            $shipmentDate,
+            $trackingNo,
+            $carrier,
+            $method,
+            $packagingNo,
+            $cost,
+            $weight,
+            $expectedShipDate,
+            $expectedCarrier,
+            $expectedMethod,
+            $expectedTransitDays,
+            $readyToShipDate,
+            $items
+        );
+    }
+
+    /**
+     * Converts the IXmlFragment to a DOMElement.
+     *
+     * @param DOMDocument $document The parent document used to create the element.
+     * @return DOMElement Returns the converted DOMElement.
+     */
+    public function toDomElement(DOMDocument $document): DOMElement
+    {
+        // TODO: Implement toDomElement() method.
     }
 }

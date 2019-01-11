@@ -14,6 +14,6 @@ class Copyright extends AbstractReason
     public function __construct()
     {
         $this->setCode('COPYRIGHT');
-        $this->setDescription('One or more images in the item violates copyright laws.');
+        $this->setReason('One or more images in the item violates copyright laws.');
     }
 }

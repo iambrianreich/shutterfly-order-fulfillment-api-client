@@ -7,6 +7,9 @@
       <w>orderer</w>
       <w>proc</w>
       <w>recv</w>
+      <w>rejecteds</w>
+      <w>rerouteds</w>
+      <w>unavail</w>
       <w>undescores</w>
     </words>
   </dictionary>

@@ -9,7 +9,19 @@
 namespace RWC\Shutterfly\Status;
 
 
-class IStatus
+interface IStatus
 {
+    /**
+     * Shutterfly status code.
+     *
+     * @return string Returns the Shutterfly status code.
+     */
+    public function getCode(): string;
 
+    /**
+     * Returns a description of the status.
+     *
+     * @return string Returns a description of the status.
+     */
+    public function getDescription() : string;
 }

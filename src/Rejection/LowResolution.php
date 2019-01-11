@@ -14,6 +14,6 @@ class LowResolution extends AbstractReason
     public function __construct()
     {
         $this->setCode('LOW_RESOLUTION');
-        $this->setDescription('One or more images in the item was judged to have too low a resolution to print.');
+        $this->setReason('One or more images in the item was judged to have too low a resolution to print.');
     }
 }

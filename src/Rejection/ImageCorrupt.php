@@ -14,6 +14,6 @@ class ImageCorrupt extends AbstractReason
     public function __construct()
     {
         $this->setCode('IMAGE_CORRUPT');
-        $this->setDescription('One or more images in the item was corrupted');
+        $this->setReason('One or more images in the item was corrupted');
     }
 }

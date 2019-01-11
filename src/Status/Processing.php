@@ -8,7 +8,6 @@
 
 namespace RWC\Shutterfly\Status;
 
-
 class Processing extends AbstractStatus
 {
     public function __construct()

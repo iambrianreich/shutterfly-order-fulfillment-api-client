@@ -14,5 +14,8 @@
             "RWC\\Shutterfly\\" : "src/"
         }
     },
-    "require": {}
+    "require": {
+        "ext-dom" : "",
+        "guzzlehttp/guzzle": "~6.0"
+    }
 }

@@ -14,6 +14,6 @@ class Fraud extends AbstractReason
     public function __construct()
     {
         $this->setCode('FRAUD');
-        $this->setDescription('Fulfiller will not fulfill item because the order is believed to be fraudulent');
+        $this->setReason('Fulfiller will not fulfill item because the order is believed to be fraudulent');
     }
 }

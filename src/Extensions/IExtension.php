@@ -9,7 +9,9 @@
 namespace RWC\Shutterfly\Extensions;
 
 
-interface IExtension
+use RWC\Shutterfly\IXmlFragment;
+
+interface IExtension extends IXmlFragment
 {
 
 }

@@ -14,6 +14,6 @@ class Obscene extends AbstractReason
     public function __construct()
     {
         $this->setCode('OBSCENE');
-        $this->setDescription('Fulfiller will not print one or more of the images in the item because it is obscene or pornographic');
+        $this->setReason('Fulfiller will not print one or more of the images in the item because it is obscene or pornographic');
     }
 }

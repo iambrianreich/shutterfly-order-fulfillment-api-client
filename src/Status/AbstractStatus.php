@@ -9,7 +9,7 @@
 namespace RWC\Shutterfly\Status;
 
 
-class AbstractStatus
+class AbstractStatus implements IStatus
 {
     /**
      * Shutterfly status code.

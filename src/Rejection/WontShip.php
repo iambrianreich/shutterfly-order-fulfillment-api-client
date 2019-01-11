@@ -14,6 +14,6 @@ class WontShip extends AbstractReason
     public function __construct()
     {
         $this->setCode('WONT_SHIP');
-        $this->setDescription('Fulfiller doesn’t ship to the destination address specified for the item (PO Box, embargoed countries, etc.)');
+        $this->setReason('Fulfiller doesn’t ship to the destination address specified for the item (PO Box, embargoed countries, etc.)');
     }
 }

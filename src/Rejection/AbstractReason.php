@@ -23,7 +23,7 @@ abstract class AbstractReason implements IReason
      *
      * @var string
      */
-    protected $description;
+    protected $reason;
 
     /**
      * Returns the Shutterfly rejection code.
@@ -50,18 +50,18 @@ abstract class AbstractReason implements IReason
      *
      * @return string Returns a description of the rejection reason.
      */
-    public function getDescription(): string
+    public function getReason(): string
     {
-        return $this->description;
+        return $this->reason;
     }
 
     /**
      * Sets a description of the rejection reason.
      *
-     * @param string $description Sets a description of the rejection reason.
+     * @param string $reason Sets a description of the rejection reason.
      */
-    protected function setDescription(string $description): void
+    public function setReason(string $reason): void
     {
-        $this->description = $description;
+        $this->reason = $reason;
     }
 }
