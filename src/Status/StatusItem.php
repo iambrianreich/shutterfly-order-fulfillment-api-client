@@ -12,6 +12,7 @@ namespace RWC\Shutterfly\Status;
 use DOMDocument;
 use DOMElement;
 use RWC\Shutterfly\AbstractXmlFragment;
+use RWC\Shutterfly\IXmlFragment;
 
 class StatusItem extends AbstractXmlFragment
 {

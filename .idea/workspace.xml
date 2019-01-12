@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="22cf9a04-74dc-4013-8b43-ef44391a2254" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Status/StatusItem.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Status/StatusItem.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Status/StatusItem.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Status/StatusItem.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -97,8 +96,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Status/StatusItem.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="15" column="38" lean-forward="true" selection-start-line="15" selection-start-column="38" selection-end-line="15" selection-end-column="38" />
+            <state relative-caret-position="-867">
+              <caret line="146" column="20" selection-start-line="146" selection-start-column="20" selection-end-line="146" selection-end-column="20" />
               <folding>
                 <element signature="e#124#140#0#PHP" expanded="true" />
               </folding>
@@ -242,17 +241,6 @@
               <item name="shutterfly-order-fulfillment-api-client" type="462c0819:PsiDirectoryNode" />
               <item name="scratch" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="shutterfly-order-fulfillment-api-client" type="b2602c69:ProjectViewProjectNode" />
-              <item name="shutterfly-order-fulfillment-api-client" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="shutterfly-order-fulfillment-api-client" type="b2602c69:ProjectViewProjectNode" />
-              <item name="shutterfly-order-fulfillment-api-client" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Status" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -302,12 +290,12 @@
       <workItem from="1546969822519" duration="8790000" />
       <workItem from="1547131400514" duration="386000" />
       <workItem from="1547148446932" duration="15162000" />
-      <workItem from="1547224232874" duration="10235000" />
+      <workItem from="1547224232874" duration="10620000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="52362000" />
+    <option name="totallyTimeSpent" value="52747000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -753,8 +741,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Status/StatusItem.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="15" column="38" lean-forward="true" selection-start-line="15" selection-start-column="38" selection-end-line="15" selection-end-column="38" />
+        <state relative-caret-position="-867">
+          <caret line="146" column="20" selection-start-line="146" selection-start-column="20" selection-end-line="146" selection-end-column="20" />
           <folding>
             <element signature="e#124#140#0#PHP" expanded="true" />
           </folding>
