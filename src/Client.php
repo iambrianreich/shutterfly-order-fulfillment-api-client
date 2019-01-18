@@ -13,7 +13,7 @@ use GuzzleHttp\Exception\ClientException;
 use GuzzleHttp\Exception\GuzzleException;
 use RWC\Shutterfly\Status\OrderStatus;
 
-class Client
+class Client implements IClient
 {
     /**
      * @var ClientInterface
