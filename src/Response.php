@@ -197,10 +197,20 @@ class Response extends AbstractXmlFragment implements IXmlDocument
             $response->appendChild($success);
             $success->appendChild($message);
         } else {
+            // Get error element.
             $error = $document->createElement('error');
-            $message = $document->createElement('message', $this->getError());
+
+            // Append summary to error
+            $summary = $document->createElement('summary', $this->getError()->getSummary());
+            $error->appendChild($summary);
+
+            // If error has detail, append it.
+            if ($this->getError()->hasDetail()) {
+                $detail = $document->createElement('detail', $this->getError()->getDetail());
+                $error->appendChild($detail);
+            }
             $response->appendChild($error);
-            $error->appendChild($message);
+
         }
 
         return $response;
