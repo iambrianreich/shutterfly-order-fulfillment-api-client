@@ -10,23 +10,39 @@ namespace RWC\Shutterfly;
 
 use GuzzleHttp\ClientInterface;
 use GuzzleHttp\Exception\ClientException;
-use GuzzleHttp\Exception\GuzzleException;
 use RWC\Shutterfly\Status\OrderStatus;
 
 class Client implements IClient
 {
+    /**
+     * The URL of the production API.
+     *
+     * @var string
+     */
+    const PRODUCTION_URL = 'http://orderfulfillment.shutterfly.com/ogateway/status/sfly/catalyst/';
+
+    /**
+     * The API URL. Will default to the production URL. Can overload with
+     * setUrl() in order to process sandbox orders.
+     *
+     * @var string
+     */
+    protected $apiUrl;
+
     /**
      * @var ClientInterface
      */
     protected $client;
 
     /**
-     * @param ClientInterface|null $client
+     * @param ClientInterface|null $client The Guzzle Client.
+     * @param string $apiUrl The Shutterfly Fulfillment API URL.
      */
-    public function __construct(?ClientInterface $client = null)
+    public function __construct(?ClientInterface $client = null, string $apiUrl = self::PRODUCTION_URL)
     {
         $client = $client ?? new \GuzzleHttp\Client();
         $this->setClient($client);
+        $this->setUrl($apiUrl);
     }
 
     /**
@@ -50,14 +66,23 @@ class Client implements IClient
      *
      * @return string Returns the API URL.
      */
-    protected function getUrl() : string
+    public function getUrl() : string
     {
-        return 'http://orderfulfillment.shutterfly.com/ogateway/status/sfly/catalyst/';
+        return $this->apiUrl;
+    }
+
+    /**
+     * Sets the Shutterfly Fulfillment API URL.
+     *
+     * @param string $apiUrl the Shutterfly Fulfillment API URL.
+     */
+    public function setUrl(string $apiUrl) : void
+    {
+        $this->apiUrl = $apiUrl;
     }
 
     public function sendStatusRequest(OrderStatus $orderStatus) : Response
     {
-        // TODO How to inject correct URL?
         try {
             $httpResponse = $this->getClient()->request(
                 'POST',
@@ -84,5 +109,19 @@ class Client implements IClient
                return $response;
            }
         }
+    }
+
+    /**
+     * Returns a clone of this Client with a new API URL.
+     *
+     * @param string $apiUrl The API URL.
+     * @return Client Returns a clone of this client with the specified API URL.
+     */
+    public function withUrl(string $apiUrl) : Client
+    {
+        return new self(
+            $this->getClient(),
+            $apiUrl
+        );
     }
 }
