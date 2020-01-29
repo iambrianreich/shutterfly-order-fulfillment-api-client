@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="22cf9a04-74dc-4013-8b43-ef44391a2254" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/PackageRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ShipmentItem.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shutterfly-order-fulfillment-api-client.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shutterfly-order-fulfillment-api-client.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ShipmentRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/ShipmentRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ShipmentItem.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/ShipmentItem.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,7 +108,7 @@
       <workItem from="1548038626963" duration="1415000" />
       <workItem from="1548041654827" duration="599000" />
       <workItem from="1548710561891" duration="360000" />
-      <workItem from="1580320930712" duration="2983000" />
+      <workItem from="1580320930712" duration="3661000" />
     </task>
     <servers />
   </component>
@@ -128,10 +125,10 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="748" y="183" key="#com.intellij.ide.util.MemberChooser" timestamp="1580331887381">
+    <state x="748" y="183" key="#com.intellij.ide.util.MemberChooser" timestamp="1580332446491">
       <screen x="0" y="0" width="1902" height="933" />
     </state>
-    <state x="748" y="183" key="#com.intellij.ide.util.MemberChooser/0.0.1902.933@0.0.1902.933" timestamp="1580331887381" />
+    <state x="748" y="183" key="#com.intellij.ide.util.MemberChooser/0.0.1902.933@0.0.1902.933" timestamp="1580332446491" />
     <state x="755" y="204" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/1920.0.1536.824@0.0.1920.1040" timestamp="1580322106649" />
     <state x="725" y="281" key="NewPhpClassDialog" timestamp="1580322051431">
       <screen x="0" y="0" width="1902" height="933" />
