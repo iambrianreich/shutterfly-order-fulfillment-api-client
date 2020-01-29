@@ -8,6 +8,8 @@
 
 namespace RWC\Shutterfly;
 
+use DateTime;
+
 /**
  * A request for a label for a single shipment.
  */
@@ -102,7 +104,7 @@ class ShipmentRequest
     /**
      * List of shipment items included in this shipment. See section 4.1.3.
      * 
-     * @var ShpimentItem[]
+     * @var ShipmentItem[]
      */
     protected $items;
 
@@ -137,4 +139,304 @@ class ShipmentRequest
      * @var Customize|null
      */
     protected $customize;
+
+    /**
+     * Returns the shipment number.
+     *
+     * @return string Returns the shipment number.
+     */
+    public function getShipmentNo(): string
+    {
+        return $this->shipmentNo;
+    }
+
+    /**
+     * Sets the shipment number.
+     *
+     * @param string $shipmentNo The shipment number.
+     * @return ShipmentRequest returns a fluid interface.
+     */
+    public function setShipmentNo(string $shipmentNo): ShipmentRequest
+    {
+        $this->shipmentNo = $shipmentNo;
+        return $this;
+    }
+
+    /**
+     * Returns the expected shipment date.
+     *
+     * @return DateTime Returns the expected shipment date.
+     */
+    public function getShipDate(): DateTime
+    {
+        return $this->shipDate;
+    }
+
+    /**
+     * Sets the expected shipment date.
+     *
+     * @param DateTime $shipDate The expected shipment date.
+     * @return ShipmentRequest Returns a fluid interface.
+     */
+    public function setShipDate(DateTime $shipDate): ShipmentRequest
+    {
+        $this->shipDate = $shipDate;
+        return $this;
+    }
+
+    /**
+     * Returns the expected carrier code.
+     *
+     * @return string|null The expected carrier code.
+     */
+    public function getExpectedCarrier(): ?string
+    {
+        return $this->expectedCarrier;
+    }
+
+    /**
+     * Sets the expected carrier code.
+     *
+     * @param string|null $expectedCarrier the expected carrier code.
+     * @return ShipmentRequest Returns a fluid interface.
+     */
+    public function setExpectedCarrier(?string $expectedCarrier): ShipmentRequest
+    {
+        $this->expectedCarrier = $expectedCarrier;
+        return $this;
+    }
+
+    /**
+     * Returns the expected ship method.
+     *
+     * @return string|null The expected ship method.
+     */
+    public function getExpectedShipMethod(): ?string
+    {
+        return $this->expectedShipMethod;
+    }
+
+    /**
+     * Sets the expected ship method.
+     *
+     * @param string|null $expectedShipMethod The expected ship method.
+     * @return ShipmentRequest Returns a fluid interface.
+     */
+    public function setExpectedShipMethod(?string $expectedShipMethod): ShipmentRequest
+    {
+        $this->expectedShipMethod = $expectedShipMethod;
+        return $this;
+    }
+
+    /**
+     * Returns the source "ship from" zip code.
+     *
+     * @return string Returns the source zip code.
+     */
+    public function getSourceZip(): string
+    {
+        return $this->sourceZip;
+    }
+
+    /**
+     * sets the source "ship from" zip code.
+     *
+     * @param string $sourceZip The "ship from" zip code.
+     * @return ShipmentRequest Returns a fluid interface.
+     */
+    public function setSourceZip(string $sourceZip): ShipmentRequest
+    {
+        $this->sourceZip = $sourceZip;
+        return $this;
+    }
+
+    /**
+     * Returns the weight of the package.
+     *
+     * @return float|null Returns the weight of the package.
+     */
+    public function getWeight(): ?float
+    {
+        return $this->weight;
+    }
+
+    /**
+     * Sets the weight of the package.
+     *
+     * @param float|null $weight The weight of the package.
+     * @return ShipmentRequest Returns a fluid interface.
+     */
+    public function setWeight(?float $weight): ShipmentRequest
+    {
+        $this->weight = $weight;
+        return $this;
+    }
+
+    /**
+     * Returns the packaging part number.
+     *
+     * @return string|null Returns the packaging part number.
+     */
+    public function getPackagingPartNo(): ?string
+    {
+        return $this->packagingPartNo;
+    }
+
+    /**
+     * Sets the packaging part number.
+     *
+     * @param string|null $packagingPartNo The packaging part number.
+     * @return ShipmentRequest Returns a fluid interface.
+     */
+    public function setPackagingPartNo(?string $packagingPartNo): ShipmentRequest
+    {
+        $this->packagingPartNo = $packagingPartNo;
+        return $this;
+    }
+
+    /**
+     * @return float|null
+     */
+    public function getHeight(): ?float
+    {
+        return $this->height;
+    }
+
+    /**
+     * @param float|null $height
+     * @return ShipmentRequest
+     */
+    public function setHeight(?float $height): ShipmentRequest
+    {
+        $this->height = $height;
+        return $this;
+    }
+
+    /**
+     * @return float|null
+     */
+    public function getLength(): ?float
+    {
+        return $this->length;
+    }
+
+    /**
+     * @param float|null $length
+     * @return ShipmentRequest
+     */
+    public function setLength(?float $length): ShipmentRequest
+    {
+        $this->length = $length;
+        return $this;
+    }
+
+    /**
+     * @return float|null
+     */
+    public function getWidth(): ?float
+    {
+        return $this->width;
+    }
+
+    /**
+     * @param float|null $width
+     * @return ShipmentRequest
+     */
+    public function setWidth(?float $width): ShipmentRequest
+    {
+        $this->width = $width;
+        return $this;
+    }
+
+    /**
+     * @return ShipmentItem[]
+     */
+    public function getItems(): array
+    {
+        return $this->items;
+    }
+
+    /**
+     * @param ShipmentItem[] $items
+     * @return ShipmentRequest
+     */
+    public function setItems(array $items): ShipmentRequest
+    {
+        $this->items = $items;
+        return $this;
+    }
+
+    /**
+     * @return PackageRequest|null
+     */
+    public function getPackages(): ?PackageRequest
+    {
+        return $this->packages;
+    }
+
+    /**
+     * @param PackageRequest|null $packages
+     * @return ShipmentRequest
+     */
+    public function setPackages(?PackageRequest $packages): ShipmentRequest
+    {
+        $this->packages = $packages;
+        return $this;
+    }
+
+    /**
+     * @return string|null
+     */
+    public function getSenderReference1(): ?string
+    {
+        return $this->senderReference1;
+    }
+
+    /**
+     * @param string|null $senderReference1
+     * @return ShipmentRequest
+     */
+    public function setSenderReference1(?string $senderReference1): ShipmentRequest
+    {
+        $this->senderReference1 = $senderReference1;
+        return $this;
+    }
+
+    /**
+     * @return Address|null
+     */
+    public function getAddress(): ?Address
+    {
+        return $this->address;
+    }
+
+    /**
+     * @param Address|null $address
+     * @return ShipmentRequest
+     */
+    public function setAddress(?Address $address): ShipmentRequest
+    {
+        $this->address = $address;
+        return $this;
+    }
+
+    /**
+     * @return Customize|null
+     */
+    public function getCustomize(): ?Customize
+    {
+        return $this->customize;
+    }
+
+    /**
+     * @param Customize|null $customize
+     * @return ShipmentRequest
+     */
+    public function setCustomize(?Customize $customize): ShipmentRequest
+    {
+        $this->customize = $customize;
+        return $this;
+    }
+
+
 }
